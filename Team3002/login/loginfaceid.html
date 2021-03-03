@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+  
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom styles for this template -->
+    <link href="login.css" rel="stylesheet">
+
+    <!--Webcam Styling-->
+    <style>
+        #videoElement {
+            width: 250px;
+            height: 190px;
+            background-color: #666;
+            align-self: center;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="card align-items-center" style="width: 50rem;">
+        <form class="form-signin">
+            <h1>Tracking System</h1>
+            </br>
+            <div class="card-body">
+                <div id="container">
+                    <video autoplay="true" id="videoElement">
+                    
+                    </video>
+                </div>
+                </br>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Confirm Face ID</button>
+                
+                </br>
+                <a href="#"><h6>Forgot Username or Password?</h6></a>
+
+                <p class="mt-5 mb-3 text-muted">Team 3002 &copy; 2020-2021</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+
+    <!-- Webcam Script-->
+    <script>
+        var video = document.querySelector("#videoElement");
+
+        if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+            video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+            console.log("Something went wrong!");
+            });
+        }
+    </script>
+    <!-- End Webcam Script-->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+  </body>
+</html>
