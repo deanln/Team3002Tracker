@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -33,25 +32,31 @@
           <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
-                <li class="nav-item">
+                <li class="nav-item" style="margin-top: 15rem">
                   <a class="nav-link active" href="../dashboard/dashboard inventory.html">
-                    <span data-feather="home"></span>
-                    Dashboard <span class="sr-only">(current)</span>
+                    <span data-feather="underline"></span>
+                    Chair <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../humanresource/hrdash.html">
-                    <span data-feather="file-text"></span>
-                    Human Resource
+                    <span data-feather="home"></span>
+                    House
                   </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../humanresource/hrdash.html">
+                      <span data-feather="user"></span>
+                      Robot
+                    </a>
+                  </li>
               </ul>
             </div>
           </nav>
 
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-              <h1 class="h2">Inventory</h1>
+              <h1 class="h2">Chair Assembly - Step 1</h1>
               <div class="btn-toolbar mb-2 mb-md-0">
                 <div class="btn-group mr-2">
                   <!-- Button trigger modal -->
@@ -203,18 +208,33 @@
   
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Inventory</a>
+                  <a class="nav-link" aria-current="page" href="#">Information</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="dashboard workload a.html">Workload</a>
+                  <a class="nav-link active" href="../1chair/chair1.html">Assembly</a>
                 </li>
               </ul>
 
-            <div>
-                <h3>Current Progress in Finished Goods</h3>
-                <canvas class="my-4" id="myChart1" width="900" height="380"></canvas>
-                <h3>Current Availability in Parts</h3>
-                <canvas class="my-4" id="myChart2" width="900" height="380"></canvas>
+            <div style="padding: 1rem">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+                  </div>
+                  
+                <div class="row" style="border: 3px solid gray; margin: 1rem">
+                    <div class="col-4">
+                        <img src="../1chair/mat1.PNG" style="margin: 10rem">
+                    </div>
+                    <div class="col-3" style="margin: 5rem">
+                        <h3>Front:</h3>
+                        <img src="../1chair/Chair/Chair_back_step1.gif" width=400px>
+                        <h3>Back: </h3>
+                        <img src="../1chair/Chair/Chair_step1.gif" width=420px>
+                    </div>
+
+                <div style="margin-top: 35rem; margin-left: 15rem">
+                    <button>Next Step</button>
+                </div>
+                </div>
             </div>
           </main>
         </div>
@@ -231,90 +251,6 @@
     <script>
       feather.replace()
     </script>
-
-    <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script>
-      var ctx = document.getElementById("myChart1");
-      var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ["Chair", "House", "Robot"],
-          datasets: [{
-            data: [140, 90, 10],
-            lineTension: 0,
-            backgroundColor: [
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(255, 99, 132, 0.2)',
-        ],
-        borderColor: [
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(255, 99, 132, 0.2)',
-        ],
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-
-<script>
-    var ctx = document.getElementById("myChart2");
-    var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ["Block 1", "Block 2", "Block 3", "Block 4", "Block 5", "Block 6", "Block 7"],
-        datasets: [{
-          data: [15339, 21345, 18483, 24003, 23489, 24092, 17034],
-          lineTension: 0,
-          backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-        ],
-          borderWidth: 4,
-          pointBackgroundColor: '#007bff'
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: false
-            }
-          }]
-        },
-        legend: {
-          display: false,
-        }
-      }
-    });
-  </script>
 
   </body>
 </html>
