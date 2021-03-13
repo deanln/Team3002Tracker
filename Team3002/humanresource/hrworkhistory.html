@@ -117,80 +117,150 @@
               </ul>
 
             <div>
-                <div class="container-fluid" style="margin:1rem">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card bg-default">
-                              <div class="card bg-default">
-                                <div class="d-flex align-items-center">
-                                  <div class="image"> <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155"> </div>
-                                  <div class="ml-3 w-100">
-                                      <h4 class="mb-0 mt-0">Tracy Lin</h4> <span>ID: 370212</span>
-                                      <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
-                                        <div class="d-flex flex-column"> <span class="articles">Position</span> <span class="number1">Group A</span> </div>
-                                        <div class="d-flex flex-column"> <span class="followers">E-mail</span> <span class="number2">tracy1019@gmail.com</span> </div>
-                                        <div class="d-flex flex-column"> <span class="rating">Service</span> <span class="number3">4yr 3mo</span> </div>
-                                      </div>
-                                      <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2" data-toggle="modal" data-target="#exampleModal">Edit Profile</button> 
-                                      
-                                          <!-- Modal -->
-                                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                              <div class="modal-content">
-                                                <div class="modal-header">
-                                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                  </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                  ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+              <div class="container-fluid" style="margin:1rem">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-default">
+                          <div class="card bg-default">
+                            <div class="d-flex align-items-center">
+                              <div class="image"> <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155"> </div>
+                              <div class="ml-3 w-100">
+                                  <h4 class="mb-0 mt-0">Tracy Lin</h4> <span>ID: 370212</span>
+                                  <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                                      <div class="d-flex flex-column"> <span class="articles">Position</span> <span class="number1">Group A</span> </div>
+                                      <div class="d-flex flex-column"> <span class="followers">E-mail</span> <span class="number2">tracy1019@gmail.com</span> </div>
+                                      <div class="d-flex flex-column"> <span class="rating">Service</span> <span class="number3">4yr 3mo</span> </div>
+                                  </div>
+                                  <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2" data-toggle="modal" data-target="#exampleModal">Edit Profile</button> 
+                                  
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                              <div class="container bootstrap snippets bootdey">
+                                                <h1 class="text-primary"><span class="glyphicon glyphicon-user"></span>Edit Employee Profile</h1>
+                                                  <hr>
+                                              <div class="row">
+                                                  <!-- left column -->
+                                                  <div class="col-md-3">
+                                                    <div class="text-center">
+                                                      <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                                                      <h6>Upload a different photo...</h6>
+                                                      
+                                                      <input type="file" class="form-control">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <!-- edit form column -->
+                                                  <div class="col-md-9 personal-info">
+                                                    <div class="alert alert-info alert-dismissable">
+                                                      <a class="panel-close close" data-dismiss="alert">×</a> 
+                                                      <i class="fa fa-coffee"></i>
+                                                      Edit employee profile here.
+                                                    </div>
+                                                    <h3>Personal info</h3>
+                                                    
+                                                    <form class="form-horizontal" role="form">
+                                                      <div class="form-group">
+                                                        <label class="col-lg-3 control-label">First name:</label>
+                                                        <div class="col-lg-8">
+                                                          <input class="form-control" type="text" value="dey-dey">
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label class="col-lg-3 control-label">Last name:</label>
+                                                        <div class="col-lg-8">
+                                                          <input class="form-control" type="text" value="bootdey">
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label class="col-lg-3 control-label">Company:</label>
+                                                        <div class="col-lg-8">
+                                                          <input class="form-control" type="text" value="">
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label class="col-lg-3 control-label">Email:</label>
+                                                        <div class="col-lg-8">
+                                                          <input class="form-control" type="text" value="janesemail@gmail.com">
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label class="col-lg-3 control-label">Time Zone:</label>
+                                                        <div class="col-lg-8">
+                                                          <div class="ui-select">
+                                                            <select id="user_time_zone" class="form-control">
+                                                              <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                                              <option value="Alaska">(GMT-09:00) Alaska</option>
+                                                              <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                                              <option value="Arizona">(GMT-07:00) Arizona</option>
+                                                              <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                                              <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                                              <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                                              <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </form>
+                                                  </div>
                                               </div>
                                             </div>
+                                            <hr>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
                                           </div>
-                                               
+                                        </div>
                                       </div>
+                                           
                                   </div>
                               </div>
-                            </div>
-                            </div>
-                            <div class="card">
-                              <div class="card bg-default">
-                                <div class="d-flex align-items-center">
-                                  <div class="image"> <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155"> </div>
-                                  <div class="ml-3 w-100">
-                                      <h4 class="mb-0 mt-0">Tracy Lin</h4> <span>ID: 370212</span>
-                                      <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
-                                        <div class="d-flex flex-column"> <span class="articles">Position</span> <span class="number1">Group A</span> </div>
-                                        <div class="d-flex flex-column"> <span class="followers">E-mail</span> <span class="number2">tracy1019@gmail.com</span> </div>
-                                        <div class="d-flex flex-column"> <span class="rating">Service</span> <span class="number3">4yr 3mo</span> </div>
-                                      </div>
-                                      <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2" data-toggle="modal" data-target="#exampleModal">Edit Profile</button> </div>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                          <div class="card bg-default">
+                            <div class="d-flex align-items-center">
+                              <div class="image"> <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155"> </div>
+                              <div class="ml-3 w-100">
+                                  <h4 class="mb-0 mt-0">David Harris</h4> <span>ID: 370212</span>
+                                  <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                                    <div class="d-flex flex-column"> <span class="articles">Position</span> <span class="number1">Group B</span> </div>
+                                    <div class="d-flex flex-column"> <span class="followers">E-mail</span> <span class="number2">davidh@gmail.com</span> </div>
+                                    <div class="d-flex flex-column"> <span class="rating">Service</span> <span class="number3">1yr 3mo</span> </div>
                                   </div>
+                                  <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2" data-toggle="modal" data-target="#exampleModal">Edit Profile</button> </div>
                               </div>
-                            </div>
-                            </div>
-                            <div class="card">
-                              <div class="card bg-default">
-                                <div class="d-flex align-items-center">
-                                  <div class="image"> <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155"> </div>
-                                  <div class="ml-3 w-100">
-                                      <h4 class="mb-0 mt-0">Tracy Lin</h4> <span>ID: 370212</span>
-                                      <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
-                                        <div class="d-flex flex-column"> <span class="articles">Position</span> <span class="number1">Group A</span> </div>
-                                        <div class="d-flex flex-column"> <span class="followers">E-mail</span> <span class="number2">tracy1019@gmail.com</span> </div>
-                                        <div class="d-flex flex-column"> <span class="rating">Service</span> <span class="number3">4yr 3mo</span> </div>
-                                      </div>
-                                      <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2" data-toggle="modal" data-target="#exampleModal">Edit Profile</button> </div>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                          <div class="card bg-default">
+                            <div class="d-flex align-items-center">
+                              <div class="image"> <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155"> </div>
+                              <div class="ml-3 w-100">
+                                  <h4 class="mb-0 mt-0">Kevin Tsu</h4> <span>ID: 370212</span>
+                                  <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                                    <div class="d-flex flex-column"> <span class="articles">Position</span> <span class="number1">Group C</span> </div>
+                                    <div class="d-flex flex-column"> <span class="followers">E-mail</span> <span class="number2">kevints@gmail.com</span> </div>
+                                    <div class="d-flex flex-column"> <span class="rating">Service</span> <span class="number3">6yr 3mo</span> </div>
                                   </div>
+                                  <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2" data-toggle="modal" data-target="#exampleModal">Edit Profile</button> </div>
                               </div>
-                            </div>
-                            </div>
+                          </div>
+                        </div>
+                        </div>
                 
                         </div>
 
