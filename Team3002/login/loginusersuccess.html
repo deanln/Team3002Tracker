@@ -14,57 +14,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <!-- Custom styles for this template -->
-    <link href="../login/login.css" rel="stylesheet">
-
-    <!--Webcam Styling-->
-    <style>
-        #videoElement {
-            width: 250px;
-            height: 190px;
-            background-color: #666;
-            align-self: center;
-        }
-    </style>
-
+    <link href="login.css" rel="stylesheet">
   </head>
 
-  <body>
-    <div class="card align-items-center" style="width: 50rem;">
-        <form class="form-signin"  action="../login/loginusersuccess.html">
-            <h1 style="text-align: center;">Zeno Effect Tracking System</h1>
-            </br>
-            <div class="card-body">
-                <div id="container">
-                    <video autoplay="true" id="videoElement">
-                    
-                    </video>
-                </div>
-                </br>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Confirm Face ID</button>
-                
-                </br>
-            </div>
+  <body class="text-center">
+    <div class="card" style="width: 25rem;">
+        <form class="form-signin" action="../dashboard/dashboard inventory.html">
+        <h1> Zeno Effect Tracking System</h1>
+        </br>
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" alt="Avatar" class="md-avatar rounded-circle size-2">
+
+        <div class="card-body">
+          <h4 class="card-title">Welcome Employee!</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Clock In:</b> 08:56</li>
+            <li class="list-group-item"><b>ID No.:</b> 120421</li>
+            <li class="list-group-item"><b>Role:</b> Employee</li>
+          </ul>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Continue</button>
+
+        <p class="mt-5 mb-3 text-muted">Team 3002 &copy; 2020-2021</p>
         </form>
     </div>
 
     <!-- Optional JavaScript -->
-
-    <!-- Webcam Script-->
-    <script>
-        var video = document.querySelector("#videoElement");
-
-        if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-            video.srcObject = stream;
-            })
-            .catch(function (err0r) {
-            console.log("Something went wrong!");
-            });
-        }
-    </script>
-    <!-- End Webcam Script-->
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
